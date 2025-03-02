@@ -4,6 +4,6 @@
   left: 0;
   bottom: 0;
   width: 280px;
-  background-color: var(--color-panel);
+  background-color: var(--gray-2);
   border-right: 1px solid var(--gray-a3);
 }

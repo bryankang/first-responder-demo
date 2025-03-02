@@ -1,3 +1,9 @@
 .root {
 
 }
+
+.wrapper {
+  border-radius: var(--radius-2);
+  border: 1px solid var(--gray-a3);
+  background-color: var(--gray-a2);
+}

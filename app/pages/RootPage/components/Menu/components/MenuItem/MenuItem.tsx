@@ -1,12 +1,12 @@
 import { Flex, Reset, Tooltip } from "@radix-ui/themes";
 import { FC } from "react";
-import { Icon } from "@phosphor-icons/react";
+import { Star } from "@phosphor-icons/react/Star";
 import styles from "./MenuItem.module.css";
 import clsx from "clsx";
 import { NavLink } from "@remix-run/react";
 
 export type MenuItemProps = {
-  icon: Icon;
+  icon: typeof Star;
   href: string;
   label: string;
 };

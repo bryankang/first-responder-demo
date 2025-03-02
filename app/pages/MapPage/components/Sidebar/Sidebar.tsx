@@ -8,7 +8,7 @@ import {
   TextField,
 } from "@radix-ui/themes";
 import { ActivityCard } from "./components/ActivityCard";
-import { FunnelSimple } from "@phosphor-icons/react";
+import { FunnelSimple } from "@phosphor-icons/react/FunnelSimple";
 
 export type SidebarProps = {};
 

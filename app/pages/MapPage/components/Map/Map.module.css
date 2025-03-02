@@ -1,0 +1,68 @@
+.root {
+  position: absolute !important;
+  inset: 0;
+  left: 280px;
+}
+
+:global(.mapboxgl-ctrl) {
+  display: none;
+}
+
+.markerContainer {
+  padding: 3px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--gray-a7);
+}
+
+.marker {
+  position: relative;
+  padding: 2px;
+  background-image: url('https://github.com/shadcn.png');
+  background-size: cover;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+
+  z-index: 9999;
+}
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: 5;
+}
+.pulse::before,
+.pulse::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--red-a9);
+  animation: pulse 2s infinite;
+}
+.pulse::after {
+  animation-delay: 0.5s;
+}
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(5);
+      opacity: 0;
+  }
+}

@@ -1,10 +1,18 @@
 import { FC } from "react";
 import styles from "./Details.module.css";
-import { Callout, Flex, IconButton, Text, TextField } from "@radix-ui/themes";
+import {
+  Button,
+  Callout,
+  Flex,
+  IconButton,
+  Text,
+  TextField,
+} from "@radix-ui/themes";
 import { PaperPlaneRight } from "@phosphor-icons/react/PaperPlaneRight";
 import { X } from "@phosphor-icons/react/X";
 import { Comment } from "./components/Comment";
-import { Info } from "@phosphor-icons/react";
+import { Info } from "@phosphor-icons/react/Info";
+import routeImage from "./route.jpg";
 
 export type DetailsProps = {};
 
@@ -30,29 +38,53 @@ export const Details: FC<DetailsProps> = () => {
             A kid tripped and fell down the stairs. Badly wounded.
           </Callout.Text>
         </Callout.Root>
-        <Comment
-          color="indigo"
-          fallback="B"
-          date="3/3/2025 5:12 PM"
-          message="Bryan reported an incident"
-          status
-        />
-        <Comment
-          color="mint"
-          fallback="J"
-          date="3/3/2025 5:15 PM"
-          message="It's gotten a lot worse!"
-        />
-        <Comment
-          color="amber"
-          fallback="T"
-          date="3/3/2025 5:18 PM"
-          message="PLEASE SEND HELP!"
-        />
+        <Flex direction="column" gap="4">
+          <Comment
+            color="indigo"
+            fallback="B"
+            date="3/3/2025 5:12 PM"
+            message="Bryan reported an incident"
+            status
+          />
+          <Comment
+            color="mint"
+            fallback="J"
+            date="3/3/2025 5:15 PM"
+            message="James: It's gotten a lot worse!"
+          />
+          <Comment
+            color="amber"
+            fallback="T"
+            date="3/3/2025 5:18 PM"
+            message="Taylor: PLEASE SEND HELP!"
+          />
+          <Comment
+            color="purple"
+            fallback="D"
+            date="3/3/2025 5:24 PM"
+            message="Dispatch: Follow this route"
+          >
+            <img
+              src={routeImage}
+              alt="Route"
+              style={{
+                objectFit: "cover",
+                width: "100%",
+              }}
+            />
+            <Button size="1" variant="soft" color="gray">
+              Edit route
+            </Button>
+          </Comment>
+        </Flex>
       </Flex>
       <Flex align="center" p="2" gap="2">
         <Flex direction="column" flexGrow="1">
-          <TextField.Root placeholder="Type a message" variant="surface" />
+          <TextField.Root
+            size="2"
+            placeholder="Type a message"
+            variant="surface"
+          />
         </Flex>
         <IconButton variant="soft" color="gray" style={{ margin: 0 }}>
           <PaperPlaneRight />
