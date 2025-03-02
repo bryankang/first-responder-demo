@@ -1,0 +1,10 @@
+.root {
+  border-radius: var(--radius-2);
+  width: 36px;
+  height: 36px;
+  color: var(--gray-10);
+}
+.rootActive {
+  background-color: var(--gray-a3);
+  color: var(--gray-12);
+}

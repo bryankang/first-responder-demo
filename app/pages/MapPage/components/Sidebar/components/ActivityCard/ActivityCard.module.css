@@ -1,0 +1,8 @@
+.root {
+  background-color: var(--color-panel);
+  border-radius: var(--radius-2);
+  border: 1px solid var(--gray-a3);
+}
+.root:hover {
+  background-color: var(--gray-a3);
+}

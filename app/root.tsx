@@ -5,6 +5,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { RootPage } from "./pages/RootPage";
+import "../styles/main.css";
 import { Analytics } from "@vercel/analytics/react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -27,5 +29,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <RootPage>
+      <Outlet />
+    </RootPage>
+  );
 }

@@ -9,12 +9,16 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "@radix-ui/themes": "^3.2.1",
     "@remix-run/node": "2.10.0",
     "@remix-run/react": "2.10.0",
     "@remix-run/server-runtime": "2.10.0",
     "@vercel/analytics": "^1.2.2",
     "@vercel/remix": "2.10.0",
+    "clsx": "^2.1.1",
     "isbot": "^4",
+    "modern-normalize": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

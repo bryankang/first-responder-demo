@@ -1,0 +1,13 @@
+.root {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  background-color: var(--color-panel);
+  border-left: 1px solid var(--gray-a3);
+}
+
+.header {
+  border-bottom: 1px solid var(--gray-a3);
+}
